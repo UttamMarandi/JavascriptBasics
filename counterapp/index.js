@@ -109,10 +109,59 @@ save12();
 
 // 13. Html : Create a save button with id save-btn and call the save12() fn
 
-// Create a variable message that stores a string
+// 14.Create a variable message that stores a string
 
 console.log ("Create a variable message that stores a string")
 
 let message = "You have three new notifications"
 console.log(message)
+
+//15. Concanetate strings +
+
+console.log ("Concanetate strings")
+let user = "Uttam";
+
+console.log(user+message)
+console.log(user+ " "+ message)
+
+//16.Create a variable that store the concatenated message 
+
+console.log("Create a variable that store the concatenated message ");
+
+let plusMessage = user + " " + message 
+console.log(plusMessage);
+
+//17. Test - String 1 TS - 52:12
+console.log("Test - String 1 TS - 52:12")
+
+let name = "Uttam"
+let greeting = "Hi, My name is"
+
+let myGreeting = greeting + " " + name
+
+console.log(myGreeting)
+
+// 18.Strings vs Numbers
+console.log("Add number to a string");
+
+let name18 = 40
+
+let greeting18 = "Hi, I am "
+
+let myGreeting18 = greeting18  + "" + name18 //when a number is added to a string , the number is converted into a string
+
+console.log (myGreeting18)
+
+
+//19. Concatenate a string which is also a number "40"
+
+console.log("Concatenate a string which is also a number (40) ");
+
+let points19 = 40;
+
+let bonusPoints19 = "5"
+
+let totalPoints19 = points19 + bonusPoints19;
+
+console.log(totalPoints19); //405 as points19 is converted to a string
 
