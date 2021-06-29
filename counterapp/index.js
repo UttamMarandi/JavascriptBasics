@@ -163,6 +163,15 @@ let bonusPoints19 = "5"
 
 let totalPoints19 = points19 + bonusPoints19;
 
-console.log(totalPoints19); //405 as points19 is converted to a string
+console.log(totalPoints19); 
 
-//is everything okk
+//20. Create Save feature
+
+let saveEl = document.getElementById("save-el")
+
+function save() {           //save() is called when SAVE button is clicked ..But save () changes the content of the p paragraph
+    
+    let countText = count + " - "
+    
+    saveEl.innerText = saveEl.innerText + countText
+}
