@@ -1,4 +1,4 @@
-//1.Intialization 
+//1.Intialization of variable
 let firstBatch = 5;
 
 let count1 = firstBatch;
@@ -18,7 +18,7 @@ count2 = count2 + 2;
 
  console.log(count2);
 
-//3.Test
+//3.Test 
 
 let bonusPoints3 = 50;
 bonusPoints3 = bonusPoints3 + 50;
@@ -36,8 +36,8 @@ let count = 0;
 function increment() {
     
     count = count +1;
-    console.log("clicked");
-    console.log(count);
+    // console.log("clicked");
+    // console.log(count);
 
 }
 
@@ -82,3 +82,37 @@ function lapsCompletedfn() {
 lapsCompletedfn();
 lapsCompletedfn();
 lapsCompletedfn();
+
+// 10. Increment on clicks - Change count in html
+console.log("Increment on clicks")
+
+let count10 = 0;
+
+function increment10() {
+    count10 = count10 + 1;
+    console.log (count10);
+    document.getElementById("count-el").innerText = count10;
+}
+
+//11.Document Object Model
+
+//12. Create a function save12() , which logs out the count when called
+console.log ("Create a function save12() , which logs out the count when called")
+
+let count12 = 0;
+
+function save12() {
+    console.log (count12)
+}
+
+save12();
+
+// 13. Html : Create a save button with id save-btn and call the save12() fn
+
+// Create a variable message that stores a string
+
+console.log ("Create a variable message that stores a string")
+
+let message = "You have three new notifications"
+console.log(message)
+
