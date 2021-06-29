@@ -165,3 +165,4 @@ let totalPoints19 = points19 + bonusPoints19;
 
 console.log(totalPoints19); //405 as points19 is converted to a string
 
+//is everything okk
