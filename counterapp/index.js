@@ -171,11 +171,18 @@ let saveEl = document.getElementById("save-el")
 
 let countEl = document.getElementById("count-el")
 
+let totalEl = document.getElementById("total-count")
+
 let countfn =  0
+let totalfn = 0
 
 function incrementfn () {
     countfn += 1
+    totalfn += 1
     countEl.textContent = countfn
+
+   
+
 }
 
 function save() {           //save() is called when SAVE button is clicked ..But save () changes the content of the p paragraph
@@ -186,9 +193,10 @@ function save() {           //save() is called when SAVE button is clicked ..But
    
     countEl.textContent = 0
 
+
     countfn = 0 //21 . set the count to 0 on save
 
-    
+    totalEl.textContent = totalfn
 
 }
 
@@ -197,3 +205,13 @@ function save() {           //save() is called when SAVE button is clicked ..But
 // 21. Set the count to 0 on save
 
 
+// PRACTICE SESSION
+
+//1. Practice
+
+let firstNameP1 = Uttam
+let secondNameP1 = Marandi 
+
+let fullNameP1 = firstNameP1 + secondNameP1
+
+console.log(fullnameP1);
