@@ -169,9 +169,31 @@ console.log(totalPoints19);
 
 let saveEl = document.getElementById("save-el")
 
+let countEl = document.getElementById("count-el")
+
+let countfn =  0
+
+function incrementfn () {
+    countfn += 1
+    countEl.textContent = countfn
+}
+
 function save() {           //save() is called when SAVE button is clicked ..But save () changes the content of the p paragraph
     
-    let countText = count + " - "
+    let countText = countfn + " - "
     
-    saveEl.innerText = saveEl.innerText + countText
+    saveEl.textContent += countText
+   
+    countEl.textContent = 0
+
+    countfn = 0 //21 . set the count to 0 on save
+
+    
+
 }
+
+
+
+// 21. Set the count to 0 on save
+
+
