@@ -209,9 +209,43 @@ function save() {           //save() is called when SAVE button is clicked ..But
 
 //1. Practice
 
-let firstNameP1 = Uttam
-let secondNameP1 = Marandi 
+let firstNameP1 = "Uttam"
+let secondNameP1 = "Marandi" 
 
-let fullNameP1 = firstNameP1 + secondNameP1
+let fullNameP1 = firstNameP1 + " " + secondNameP1
 
-console.log(fullnameP1);
+console.log(fullNameP1);
+
+//2. Practice 2
+
+let nameP2 = "Uttam"
+let greetingP2 = "Hello there"
+
+function greetingP2fn() {
+    myGreetingP2 = greetingP2 +", " +nameP2 
+    console.log(myGreetingP2);
+}
+
+greetingP2fn()
+
+//3.Practice 3
+
+console.log("Practice 3");
+let myPointsP3 = 3
+
+function add3pointsP3 () {
+    myPointsP3 += 3;
+}
+
+function removePointsP3() {
+    myPointsP3 -= 2;
+
+}
+
+add3pointsP3()
+add3pointsP3()
+add3pointsP3()
+removePointsP3()
+
+console.log(myPointsP3);
+
