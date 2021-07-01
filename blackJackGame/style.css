@@ -1,3 +1,22 @@
-h1{
-    color: green;
+body{
+    background-color: green;
+    text-align: center;
+}
+
+
+.blackjack-heading {
+    color: yellow;
+    text-align: center;
+    font-family: "Poppins";
+    padding-bottom: 50px;
+    padding-top: 200px;
+    font-size: 60px;
+} 
+
+.contain p {
+    color: #fff;
+    text-align: center;
+    font-family: "Poppins";
+    font-size: 30px;
+    line-height: 70px;
 }
