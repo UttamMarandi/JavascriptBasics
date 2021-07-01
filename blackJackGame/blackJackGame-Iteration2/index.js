@@ -6,6 +6,7 @@ let isAlive = true
 let message = ""
 let cards = [firstCard , secondCard] //9
 
+
 // 2. Create a startGame() function. Move the conditional
 // below (line 11-20) inside the body of the function.
 
@@ -25,6 +26,7 @@ let cards = [firstCard , secondCard] //9
 
 //10. Push the card to cards array
 
+//11. Create a for loop that renders out all the cards instead of just one
 
 let messageEl = document.getElementById("message-el") //3
 let sumEl = document.getElementById("sum-el") //4
@@ -34,10 +36,21 @@ function startGame () {
     renderGame()
 }
 
+
 function renderGame() {
 
     sumEl.textContent = "Sum:" + sum //4
-    cardsEl.textContent = "Cards:" + " " + cards[0] + " - " + cards[1] //5 , 9
+    cardsEl.textContent = "Cards:"//5 , 9
+
+    
+
+    for (let i = 0; i<cards.length; i++) {
+       cardsEl.textContent += cards[i] + " "
+
+    }
+    
+
+
     if (sum <= 20) {
         message = "Do you want to draw a new card? 🙂"
     } else if (sum === 21) {
