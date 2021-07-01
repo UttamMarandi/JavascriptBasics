@@ -137,3 +137,28 @@ else {
 console.log(hasBlackJack8);
 console.log(isAlive8);
 console.log(message8);
+
+//9. Arrays in Javascript
+
+//Arrays are ordered list of elements
+
+let featuredPosts = ["Check out my Netflix clone",
+    "Here's the code to my project",
+    "I've just relaunched my portfolio"
+]
+
+let skills = ["Coding",
+    "dancing",
+    "swimming",
+    "snowboarding"
+]
+
+console.log(skills[0]);
+
+
+//Arrays are also composite data type meaning diffent types of data types can be stored in an array
+
+let Me = ["Uttam",
+    22,
+    true
+]
