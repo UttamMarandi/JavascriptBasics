@@ -1,5 +1,5 @@
-let firstCard = 10
-let secondCard = 4
+let firstCard = getRandomCard()
+let secondCard = getRandomCard()
 let sum = firstCard + secondCard
 let hasBlackJack = false
 let isAlive = true
@@ -28,9 +28,16 @@ let cards = [firstCard , secondCard] //9
 
 //11. Create a for loop that renders out all the cards instead of just one
 
+//12. Create getRandomCard() to return a random number for the cards
+
 let messageEl = document.getElementById("message-el") //3
 let sumEl = document.getElementById("sum-el") //4
 let cardsEl = document.getElementById("cards-el") //5
+
+function getRandomCard() {
+    return 5
+}
+
 
 function startGame () {
     renderGame()
@@ -69,7 +76,7 @@ function renderGame() {
 function newCard() {                        //6
     console.log(" Drwaing a new Card");
 
-    let card = 5 //7
+    let card = getRandomCard() //7
 
     sum += card //7
 

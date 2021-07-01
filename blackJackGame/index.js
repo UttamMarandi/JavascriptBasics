@@ -247,4 +247,94 @@ for(let i = 0; i< sentence18.length; i++) {
     totalSentence18 = totalSentence18 +" "+ sentence18[i]
     
 }
-greetigEl18.textContent = totalSentence18
+// greetigEl18.textContent = totalSentence18
+
+// 19. Randomness & return of a function
+
+//20. Check the fastest player : use a function
+
+console.log("Check the fastest player : use a function");
+
+let player1Time = 102
+
+let player2Time = 107
+
+function getFastestRaceTime() {
+    if(player1Time < player2Time) {
+        return player1Time
+    } else if (player2Time < player1Tine)  {
+        return player2Time
+    }
+    else {
+        player1Time
+    }
+}
+let fastestRace = getFastestRaceTime()
+
+console.log(fastestRace);
+
+//21. Function that returns the total race time
+
+console.log("Function that returns the total race time");
+
+
+function totalRaceTime () {
+    return(player1Time + player2Time)
+}
+
+let totalTime21 = totalRaceTime()
+
+console.log(totalTime21);
+
+//22. Generate Random Numbers
+
+let randomNumber22 = Math.random()
+
+console.log(randomNumber22);
+
+//22. generate random number between 0 and 5
+console.log("generate random number between 0 and 5");
+
+let randomNumber23 = Math.random()*5
+
+console.log(randomNumber23);
+
+//23. Math.floor()
+
+console.log("Math.floor()");
+let floorNumber = Math.floor(4.784)
+
+console.log(floorNumber);
+
+//24.Use Math.floor & Math.random() together
+
+console.log("Use Math.floor & Math.random() together");
+
+
+function randomness() {
+
+    return Math.floor(Math.random() * 5) //generate bewtween 0 & 4
+}
+
+for (i=0; i<10; i++) {
+    console.log(randomness());
+}
+
+//25. Create a dice function return 1,2,3,4,5,6 randomly NOT 0
+
+console.log(" Create a dice function ");
+
+function randomnessDice () {
+    return Math.floor(Math.random() * 6) + 1
+}
+for (i=0; i<10; i++) {
+    console.log(randomnessDice());
+}
+
+
+
+
+
+ 
+
+
