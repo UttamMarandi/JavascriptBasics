@@ -162,3 +162,34 @@ let Me = ["Uttam",
     22,
     true
 ]
+
+//10. Push operations in Array
+
+console.log("Push operations in Array");
+
+let cards2 = [7,5]
+
+cards2.push(6)
+
+console.log(cards2);
+
+//11. Push the newMessage to the array, and then log out the array
+
+console.log("Push the newMessage to the array, and then log out the array");
+
+let messages = [
+    "hey, how's it going",
+    "I'm great, thank you! How about you?",
+    "All good. Been working on my portfolio lately"
+]
+
+let newMessage = "Same here! "
+
+messages.push(newMessage)
+
+console.log(messages);
+
+// 12. Remove the last item of an array pop()
+
+messages.pop()
+console.log(messages);

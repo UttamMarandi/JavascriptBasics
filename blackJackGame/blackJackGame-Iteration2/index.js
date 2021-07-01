@@ -23,6 +23,7 @@ let cards = [firstCard , secondCard] //9
 
 //9 . Solving cards problem using an array
 
+//10. Push the card to cards array
 
 
 let messageEl = document.getElementById("message-el") //3
@@ -59,6 +60,10 @@ function newCard() {                        //6
 
     sum += card //7
 
+    cards.push(card) //10
+
+    console.log( cards);
+    
     renderGame()  //7
 
 }
