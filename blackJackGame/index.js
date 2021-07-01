@@ -193,3 +193,58 @@ console.log(messages);
 
 messages.pop()
 console.log(messages);
+
+//13. Counts with javascript ... for loop
+
+console.log("Counts with javascript ... for loop");
+
+for ( let count13 = 1; count13 < 11; count13 +=1) {
+    console.log(count13);
+}
+
+//14. count from 1 to 20
+console.log("count from 1 to 20");
+
+for (let count14 = 10; count14 <=20; count14++) {
+    console.log(count14);
+}
+
+//15. Create a loop to count from 10 to 100 in steps of 10
+
+console.log("Create a loop to count from 10 to 100 in steps of 10");
+
+for(count15 = 10; count15 <= 100; count15 += 10) {
+    console.log(count15);
+}
+
+//16. Use for loop to render messages[] in console
+
+for(let i = 0; i < messages.length; i++) {
+    console.log(messages[i]);
+}
+
+//17. Array based loop
+
+console.log("Array based loop");
+
+let cards17 = [7, 3, 9]
+
+for (let i = 0; i< cards17.length ; i++) {
+    console.log(cards17[i]);
+}
+
+//18. Arrays , forloops , DOM : loop through the array of strings and display on front end
+
+console.log(" Arrays , forloops , DOM ");
+
+let sentence18 = ["Hello" , "my", "name", "is", "Uttam"]
+let greetigEl18 = document.querySelector(".greeting-el")
+console.log(greetigEl18);
+
+let totalSentence18=""
+
+for(let i = 0; i< sentence18.length; i++) {
+    totalSentence18 = totalSentence18 +" "+ sentence18[i]
+    
+}
+greetigEl18.textContent = totalSentence18
