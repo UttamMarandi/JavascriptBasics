@@ -331,10 +331,37 @@ for (i=0; i<10; i++) {
     console.log(randomnessDice());
 }
 
+//26. Call the function when both condition is true
 
+console.log(" Call the function when both condition is true");
 
+let hasCompletedCourse = true
 
+let givesCertificate = true 
 
- 
+function generateCertificate() {
+    console.log("Generating Certificate...");
+}
+
+if(hasCompletedCourse && givesCertificate) {
+    generateCertificate()
+}
+
+//27..Logical Operator ..check both variavles are false
+
+console.log("Logical Operator ..check both variavles are false");
+
+let hasSolvedChallenge = false
+let hasHintsLeft = false
+
+function showSolution() {
+    console.log("Showing the solution...");
+}
+
+if ( !(hasSolvedChallenge && hasHintsLeft)) {
+    showSolution()
+}
+
+//28. OR Operator
 
 

@@ -1,10 +1,10 @@
-let firstCard = getRandomCard()
-let secondCard = getRandomCard()
-let sum = firstCard + secondCard
+
+
+let sum = 0
 let hasBlackJack = false
-let isAlive = true
+let isAlive = false
 let message = ""
-let cards = [firstCard , secondCard] //9
+let cards = [] //9
 
 
 // 2. Create a startGame() function. Move the conditional
@@ -30,16 +30,41 @@ let cards = [firstCard , secondCard] //9
 
 //12. Create getRandomCard() to return a random number for the cards
 
+//13. getRandomCard() returns a number between 1 and 13
+
+//14. If 1 -> return 11 , if 11-13 -> return 10
+
+//15. Assigning values in startGame() : Assign the cards and sum variables only when player starts the game
+
 let messageEl = document.getElementById("message-el") //3
 let sumEl = document.getElementById("sum-el") //4
 let cardsEl = document.getElementById("cards-el") //5
 
-function getRandomCard() {
-    return 5
+function getRandomCard() { //12
+    
+    let randomNumber = Math.floor(Math.random() * 13) +1 
+
+    if (randomNumber === 1 ) { //14
+        return 11
+    } else if (randomNumber >10) {
+        return 10
+    }
+    else {
+        return randomNumber
+        
+    }
+
 }
 
 
-function startGame () {
+function startGame () { 
+    isAlive = true
+    let firstCard = getRandomCard()
+    let secondCard = getRandomCard()
+
+    cards = [firstCard, secondCard]
+    sum = firstCard + secondCard
+
     renderGame()
 }
 
