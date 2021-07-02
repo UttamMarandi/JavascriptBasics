@@ -397,3 +397,93 @@ let airbnbList = {
 console.log(airbnbList);
 
 console.log(airbnbList.isAvailable);
+
+
+//31. Practice Objects and Fuctions
+
+let person = {
+    name : "Uttam",
+    age : "22",
+    country : "India"
+}
+
+function logData() {
+    console.log(person.name + " is "+ person.age + " old and lives in "+ person.country)
+}
+
+logData()
+
+//32: Practice statement : If - else
+
+let age32 = 15
+
+if(age32 < 6 ){
+    console.log("Free Ticket");
+}
+else if (age32 < 18) {
+    console.log("Child Discount");
+}
+else if (age32 < 27) {
+    console.log("Child Discount");
+}
+else if (age32 < 67) {
+    console.log("Full Price");
+}
+
+else {
+    console.log("Senior citizen Discount");
+}
+
+//33. Practice time : For loops
+
+let largeCountries = ["China", "India", "USA", "Indonesia", "Pakistan"]
+
+for (let i =0; i<largeCountries.length; i++) {
+    console.log("- "+ largeCountries[i]);
+}
+
+//34. Practice time : push() pop()
+
+console.log("Practice time : push() pop()");
+
+let largeCountries34 = ["Tuvalu","India","USA", "Indonesia", "Monaco"]
+
+for (let i =0; i<largeCountries.length; i++) {
+    console.log("- "+ largeCountries34[i]);
+}
+console.log("After correction");
+
+largeCountries34.shift()
+largeCountries34.unshift("China")
+largeCountries34.pop()
+largeCountries34.push("Pakistan")
+
+
+for (let i =0; i<largeCountries.length; i++) {
+    console.log("- "+ largeCountries34[i]);
+}
+
+//35. Practice Time : "Logical Operators
+
+let dayofMonth = 31
+let weekday = "Friday"
+
+if (dayofMonth ===13 && weekday ===
+    "Friday") {
+    console.log("😲");
+}
+
+//36. Practice Time : Randomness Rock Paper Scissor
+
+console.log("Practice Time : Randomness Rock Paper Scissor");
+let hands = ["rock", "paper", "scissor"]
+
+function randomRPS() {
+
+   let randomIndex = Math.floor( Math.random()*3)
+   
+   return hands[randomIndex]
+
+}
+
+console.log(randomRPS());
