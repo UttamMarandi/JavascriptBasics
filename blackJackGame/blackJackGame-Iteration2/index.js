@@ -114,7 +114,7 @@ function newCard() {                        //6
     
 
     if(isAlive && !hasBlackJack) {          //16
-        console.log(" Drwaing a new Card");
+        console.log(" Drawing a new Card");
 
         let card = getRandomCard() //7
 
