@@ -5,6 +5,10 @@ let hasBlackJack = false
 let isAlive = false
 let message = ""
 let cards = [] //9
+let player= {
+    name:"Uttam",
+    chips : 169
+}
 
 
 // 2. Create a startGame() function. Move the conditional
@@ -36,9 +40,17 @@ let cards = [] //9
 
 //15. Assigning values in startGame() : Assign the cards and sum variables only when player starts the game
 
+//16. Only allow the player to get a new card is she IS alive and does not have Blackjack
+
+//17. Show Player Name and its wallet
+
 let messageEl = document.getElementById("message-el") //3
 let sumEl = document.getElementById("sum-el") //4
 let cardsEl = document.getElementById("cards-el") //5
+let playerEl = document.getElementById("player-el")
+
+
+playerEl.innerText = player.name +": $" + player.chips
 
 function getRandomCard() { //12
     
@@ -99,16 +111,21 @@ function renderGame() {
 }
 
 function newCard() {                        //6
-    console.log(" Drwaing a new Card");
-
-    let card = getRandomCard() //7
-
-    sum += card //7
-
-    cards.push(card) //10
-
-    console.log( cards);
     
-    renderGame()  //7
+
+    if(isAlive && !hasBlackJack) {          //16
+        console.log(" Drwaing a new Card");
+
+        let card = getRandomCard() //7
+
+        sum += card //7
+
+        cards.push(card) //10
+
+        console.log( cards);
+        
+        renderGame()  //7
+    }
 
 }
+

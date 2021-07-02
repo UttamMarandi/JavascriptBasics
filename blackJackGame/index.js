@@ -364,4 +364,36 @@ if ( !(hasSolvedChallenge && hasHintsLeft)) {
 
 //28. OR Operator
 
+//29. Objects in Javascript
+console.log("Objects in Javascript");
 
+let course = {
+    title : "Learn CSS value for free",
+    lessons : 16,
+    creator : "Uttam Marandi",
+    length : 65,
+    level :3 ,
+    isFree : true,
+    tags : ["html", "css"]
+}
+
+console.log(course);
+
+console.log(course.length);
+
+console.log(course.tags[0]);
+
+//30. Create an object with every data type
+
+console.log("Create an object with every data type");
+
+let airbnbList = {
+    isAvailable : true,
+    nameOfPlace : "Harida",
+    priceOfPlace : 450,
+    tagsOfPlace : ["wifi" , " hot water", "free brealfast"]
+}
+
+console.log(airbnbList);
+
+console.log(airbnbList.isAvailable);
