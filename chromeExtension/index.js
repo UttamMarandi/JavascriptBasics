@@ -6,14 +6,32 @@
 
 // 5. Push the value from the input field
 
-let myleads = []
+//6. Log out myLeads array using a loop
+
+//7. Grab unordered list 
+
+//8. Render the list into unordered list
+
+//9.How to render li elements into html : innerHTML
+
+let myLeads = ["hi","hello","senorita"]
 const inputEl = document.querySelector("#input-el")
 let inputBtn = document.getElementById("input-btn")
+const ulEL = document.getElementById("ul-el")
 
 
 inputBtn.addEventListener("click", function(){    
-    myleads.push(inputEl.value)
-    console.log(myleads);
- 
+    myLeads.push(inputEl.value)
+    console.log(myLeads);
+    console.log(myLeads.length);
+    lengthLeads = myLeads.length
 })
- 
+
+
+for(let i =0; i<myLeads.length; i++) {
+      console.log(myLeads[i]);
+      ulEL.innerHTML +="<li>" + myLeads[i] + "</li "
+}
+     
+
+
