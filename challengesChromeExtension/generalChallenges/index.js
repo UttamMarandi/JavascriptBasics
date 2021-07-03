@@ -12,6 +12,19 @@ let shippingTime = "5-12 days"
 shippingCost = 15
 shippingTime = "7-14 days"
 
-const fullPrice = basePrice - discount + shippingCost
+const fullPrice = basePrice1 - discount + shippingCost
 
 console.log("Total Price: "+ fullPrice);
+
+//2. Use .innerHtml to render a buy button inside div container
+
+const container = document.getElementById("container")
+container.innerHTML = "<button onclick='buy2()'> Buy! </button>"
+
+//3. Render "Thankyou for buying" inside same container when buy button is clicked
+
+function buy2() {
+    container.innerHTML += "<p>Thankyou for buying</p>"
+}
+
+
