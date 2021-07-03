@@ -3,9 +3,9 @@
 // 3. Log out "I want to open the box!" when it's clicked
 
 
-let boxEl = document.querySelector("#box")
 
 boxEl.addEventListener("click", function(){
     console.log("I want to open the box");
     boxEl.textContent = "I want to open the box"
 })
+
