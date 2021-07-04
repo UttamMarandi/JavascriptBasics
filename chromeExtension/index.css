@@ -3,6 +3,7 @@ body{
     margin: 0;
     font-family: "Poppins";
     box-sizing: border-box;
+    min-width: 400px;
 }
 
 /* Grren color: #5f9341 */
