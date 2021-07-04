@@ -16,8 +16,10 @@
 
 //10.Make app more performant -> Create a variable, listItems, to hold all the html for the list items -> Assign it to an empty string -> Add the item to the listItems variable instead of ulEl.innerHTML -> Render the listItems inside the unordered list using ulEl.innerHTMl
 
-let myLeads = ["hi","hello","senorita"]
-let listItems =""
+//1. Create the render function
+
+let myLeads = []
+
 
 const inputEl = document.querySelector("#input-el")
 let inputBtn = document.getElementById("input-btn")
@@ -29,18 +31,26 @@ inputBtn.addEventListener("click", function(){
     console.log(myLeads);
     console.log(myLeads.length);
     lengthLeads = myLeads.length
+    renderLeads()
 })
 
 
-for(let i =0; i<myLeads.length; i++) {
-      console.log(myLeads[i]);
-      listItems +="<li>" + myLeads[i] + "</li "
+function renderLeads() {
+    let listItems =""
+    
+    for(let i =0; i<myLeads.length; i++) {
+        console.log(myLeads[i]);
+        listItems +="<li>" + myLeads[i] + "</li> "
 
-      //Alternative of inner html
+        //Alternative of inner html
     //   const li = document.createElement("li") //no tags
     //   li.textContent = myLeads
     //   ulEL.append(li)
+    }
+    console.log(listItems);
+
+    ulEL.innerHTML = listItems
+
+
 }
-console.log(listItems);
-ulEL.innerHTML = listItems
 
