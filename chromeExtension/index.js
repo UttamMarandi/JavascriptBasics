@@ -16,7 +16,13 @@
 
 //10.Make app more performant -> Create a variable, listItems, to hold all the html for the list items -> Assign it to an empty string -> Add the item to the listItems variable instead of ulEl.innerHTML -> Render the listItems inside the unordered list using ulEl.innerHTMl
 
-//1. Create the render function
+//11. Create the render function
+
+//12. Clear the input field
+
+//13. Make the list clickable -> wrap the li tags with <a> tag, open in new tab
+
+//14.Use template literals
 
 let myLeads = []
 
@@ -32,20 +38,29 @@ inputBtn.addEventListener("click", function(){
     console.log(myLeads.length);
     lengthLeads = myLeads.length
     renderLeads()
+    inputEl.value = "" //12
 })
 
 
 function renderLeads() {
     let listItems =""
-    
+
     for(let i =0; i<myLeads.length; i++) {
         console.log(myLeads[i]);
-        listItems +="<li>" + myLeads[i] + "</li> "
+        // listItems += "<li>" +"<a href=' "+ myLeads[i] + "' target='_blank' >"+ myLeads[i]+"</a>" + "</li> "
 
         //Alternative of inner html
     //   const li = document.createElement("li") //no tags
     //   li.textContent = myLeads
     //   ulEL.append(li)
+        listItems += `
+        <li>
+            <a href='${myLeads[i]}' target = '_blank'>
+                ${myLeads[i]}
+            </a>
+        </li>
+        `
+
     }
     console.log(listItems);
 
