@@ -28,3 +28,16 @@ function buy2() {
 }
 
 
+//4. Template strings
+//5. make sender "uttam" dynamic
+
+console.log("Template strings");
+
+const recipient = "james"
+const sender = "Uttam"//5
+const email = `hey ${recipient}!
+How is it going? Cheers
+${sender}  
+` 
+
+console.log(email);
