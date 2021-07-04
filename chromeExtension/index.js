@@ -14,7 +14,11 @@
 
 //9.How to render li elements into html : innerHTML
 
+//10.Make app more performant -> Create a variable, listItems, to hold all the html for the list items -> Assign it to an empty string -> Add the item to the listItems variable instead of ulEl.innerHTML -> Render the listItems inside the unordered list using ulEl.innerHTMl
+
 let myLeads = ["hi","hello","senorita"]
+let listItems =""
+
 const inputEl = document.querySelector("#input-el")
 let inputBtn = document.getElementById("input-btn")
 const ulEL = document.getElementById("ul-el")
@@ -30,8 +34,13 @@ inputBtn.addEventListener("click", function(){
 
 for(let i =0; i<myLeads.length; i++) {
       console.log(myLeads[i]);
-      ulEL.innerHTML +="<li>" + myLeads[i] + "</li "
-}
-     
+      listItems +="<li>" + myLeads[i] + "</li "
 
+      //Alternative of inner html
+    //   const li = document.createElement("li") //no tags
+    //   li.textContent = myLeads
+    //   ulEL.append(li)
+}
+console.log(listItems);
+ulEL.innerHTML = listItems
 
