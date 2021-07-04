@@ -41,3 +41,19 @@ ${sender}
 ` 
 
 console.log(email);
+
+// 6.Json.parse & JSON.string()
+
+let myLeads = `["www.awesomelead.com"]`
+console.log(myLeads);
+
+myLeads =  JSON.parse(myLeads)
+
+console.log(typeof myLeads);
+
+myLeads.push("Hello There")
+
+console.log(myLeads);
+
+myLeads = JSON.stringify(myLeads);
+ console.log(typeof myLeads);

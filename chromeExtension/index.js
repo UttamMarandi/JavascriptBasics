@@ -24,13 +24,25 @@
 
 //14.Use template literals
 
+//15. Deploy as chrome extension
+
+//16. Persist data across page refresh :- localstorage
+
+//17. Use of JSON.parse () and JSON.stringfy()
+
 let myLeads = []
+console.log(myLeads);
 
 
 const inputEl = document.querySelector("#input-el")
 let inputBtn = document.getElementById("input-btn")
 const ulEL = document.getElementById("ul-el")
 
+
+
+console.log(localStorage.getItem("myLeads")); //16
+
+localStorage.clear
 
 inputBtn.addEventListener("click", function(){    
     myLeads.push(inputEl.value)
