@@ -30,6 +30,8 @@
 
 //17. Use of JSON.parse () and JSON.stringfy()
 
+//18. Save myLeads array to localstorage
+
 let myLeads = []
 console.log(myLeads);
 
@@ -51,6 +53,10 @@ inputBtn.addEventListener("click", function(){
     lengthLeads = myLeads.length
     renderLeads()
     inputEl.value = "" //12
+
+    localStorage.setItem("myLeads", JSON.stringify (myLeads)) //18
+
+    console.log(localStorage.getItem("myLeads"));
 })
 
 
