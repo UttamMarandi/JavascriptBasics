@@ -36,7 +36,7 @@
 
 //20. checking localStorage before rendering
 
-//22. 
+//22. making renderLeads() function more dynamic , passing arguments
 
 
 let myLeads = []
@@ -58,35 +58,14 @@ console.log(leadsFromLocalStorage);
 
 if(leadsFromLocalStorage){  //leadsFromLocalStorage === [] is wrong b.c it's true but equates with leadsFromLocal Storage which results in false
     myLeads = leadsFromLocalStorage //20
-    renderLeads()
+    render(myLeads)
 }
 
-deleteBtn.addEventListener("dblclick", function deleteAll(){
-    localStorage.clear()
-    myLeads = []
-    ulEL.innerHTML = "" // calling renderLeads() also gives the same reasults as myLeads[] array is empty now
-})
- 
 
-
-inputBtn.addEventListener("click", function(){    
-    myLeads.push(inputEl.value)
-    console.log(myLeads);
-    console.log(myLeads.length);
-    lengthLeads = myLeads.length
-    renderLeads()
-    inputEl.value = "" //12
-
-    localStorage.setItem("myLeads", JSON.stringify (myLeads)) //18
- 
-    
-})
-
-
-function renderLeads() {
+function render(leads) {
     let listItems =""
 
-    for(let i =0; i<myLeads.length; i++) {
+    for(let i =0; i<leads.length; i++) {
         console.log(myLeads[i]);
         // listItems += "<li>" +"<a href=' "+ myLeads[i] + "' target='_blank' >"+ myLeads[i]+"</a>" + "</li> "
 
@@ -101,12 +80,32 @@ function renderLeads() {
             </a>
         </li>
         `
-
     }
     console.log(listItems);
-
     ulEL.innerHTML = listItems
-
-
 }
+
+
+
+deleteBtn.addEventListener("dblclick", function deleteAll(){
+    localStorage.clear()
+    myLeads = []
+    ulEL.innerHTML = "" // calling renderLeads() also gives the same reasults as myLeads[] array is empty now
+})
+ 
+
+
+inputBtn.addEventListener("click", function(){    
+    myLeads.push(inputEl.value)
+    console.log(myLeads);
+    console.log(myLeads.length);
+    lengthLeads = myLeads.length
+    render(myLeads)
+    inputEl.value = "" //12
+
+    localStorage.setItem("myLeads", JSON.stringify (myLeads)) //18
+ 
+    
+})
+
 
