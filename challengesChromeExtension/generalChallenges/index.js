@@ -72,7 +72,7 @@ myLeads = JSON.stringify(myLeads);
      console.log("Sorry , Not enough credit");
  }
  
- //null vs undefined
+ //8.null vs undefined
  console.log("null vs undefined");
 
  let currentViewers = null
@@ -86,11 +86,46 @@ myLeads = JSON.stringify(myLeads);
  let currentViewers5
  console.log(currentViewers5); //rwturns undefined
 
- // Check true or false
+ //9. Check true or false
 
  console.log("Check true or false");
 
 
  console.log(Boolean("leo"));
 
+ //10 . Function Parameters
+
+ const welcomeEl10 = document.getElementById("welcome-el")
+
+
+
+ function greetUser(name , greeting, emoji) {
+     welcomeEl10.innerHTML = ` ${greeting} ! ${name} ${emoji}`
+ }
+
+ greetUser("Uttam" , "Hola", "🍕")
+
  
+ //11. Practice function parameters : create add() function 
+
+ console.log("Practice function parameters : create add() function ");
+ function add(num1 , num2) {
+    let total11 = num1 + num2
+    return total11
+ }
+
+ console.log(add(3,4));
+ console.log(add(9,102));
+
+ //12. Arguments & Parameters :- Arguments are variables that are used while calling the function and parameters are variables that are used while defining the function 
+
+ //13. Arrays as parameters
+console.log("Arrays as parameters");
+
+ let values13 = [4,0,1,2]
+
+ function returnFirst(array13) {
+     return array13[0]
+ }
+
+ console.log(returnFirst(values13));
