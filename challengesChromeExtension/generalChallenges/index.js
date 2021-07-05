@@ -57,3 +57,39 @@ console.log(myLeads);
 
 myLeads = JSON.stringify(myLeads);
  console.log(typeof myLeads);
+
+ //7. Truthy and falsy statement
+
+ console.log("truthy and falsy statements");
+
+ let credits7 = 0
+
+ if (credits7 > 0) {
+     console.log("Let's Play");
+
+ }
+ else {
+     console.log("Sorry , Not enough credit");
+ }
+ 
+ //null vs undefined
+ console.log("null vs undefined");
+
+ let currentViewers = null
+ currentViewers =  ["jane", "nick"]
+
+ if (currentViewers) {
+
+    console.log("we have viewers");
+ }
+ 
+ let currentViewers5
+ console.log(currentViewers5); //rwturns undefined
+
+ // Check true or false
+
+ console.log("Check true or false");
+
+
+
+ console.log(Boolean("leo"));

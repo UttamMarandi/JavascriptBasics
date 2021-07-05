@@ -32,19 +32,23 @@
 
 //18. Save myLeads array to localstorage
 
+//19. get leads from localStorage , leadsFromLocalStorage , use JSON.parse to convert array/objects to string
+
+
+
 let myLeads = []
-console.log(myLeads);
+
 
 
 const inputEl = document.querySelector("#input-el")
 let inputBtn = document.getElementById("input-btn")
 const ulEL = document.getElementById("ul-el")
 
+localStorage.clear()
+let leadsFromLocalStorage = localStorage.getItem("myLeads")
+leadsFromLocalStorage = JSON.parse(leadsFromLocalStorage)
+console.log(leadsFromLocalStorage);
 
-
-console.log(localStorage.getItem("myLeads")); //16
-
-localStorage.clear
 
 inputBtn.addEventListener("click", function(){    
     myLeads.push(inputEl.value)
@@ -55,8 +59,8 @@ inputBtn.addEventListener("click", function(){
     inputEl.value = "" //12
 
     localStorage.setItem("myLeads", JSON.stringify (myLeads)) //18
-
-    console.log(localStorage.getItem("myLeads"));
+ 
+    
 })
 
 
