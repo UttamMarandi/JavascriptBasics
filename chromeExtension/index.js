@@ -38,28 +38,34 @@
 
 //22. making renderLeads() function more dynamic , passing arguments
 
+//23. Create the tab button :- When clicked logs linkedin url
+
+//24. Save the taburl
 
 let myLeads = []
-
-
+let tabs = [
+    {
+    urllink : "https://www.linkedin.com/in/uttammarandi-r/"
+    }
+]
 
 const inputEl = document.querySelector("#input-el")
 let inputBtn = document.getElementById("input-btn")
 const ulEL = document.getElementById("ul-el")
-
 const deleteBtn = document.getElementById("delete-btn")
-
+const tabBtn = document.getElementById("tab-btn")
 
 
 let leadsFromLocalStorage = localStorage.getItem("myLeads")
-
 leadsFromLocalStorage = JSON.parse(leadsFromLocalStorage) //19
 console.log(leadsFromLocalStorage);
 
-if(leadsFromLocalStorage){  //leadsFromLocalStorage === [] is wrong b.c it's true but equates with leadsFromLocal Storage which results in false
+if(leadsFromLocalStorage){  //leadsFromLocalStorage === [] is wrong b.c [] is true but equates with leadsFromLocal Storage which results in false
     myLeads = leadsFromLocalStorage //20
     render(myLeads)
 }
+
+
 
 
 function render(leads) {
@@ -92,7 +98,13 @@ deleteBtn.addEventListener("dblclick", function deleteAll(){
     myLeads = []
     ulEL.innerHTML = "" // calling renderLeads() also gives the same reasults as myLeads[] array is empty now
 })
- 
+
+tabBtn.addEventListener("click", function() {
+    myLeads.push(tabs[0].urllink)
+    localStorage.setItem("myLeads", JSON.stringify(myLeads))
+    render(myLeads)
+
+})
 
 
 inputBtn.addEventListener("click", function(){    
@@ -105,7 +117,6 @@ inputBtn.addEventListener("click", function(){
 
     localStorage.setItem("myLeads", JSON.stringify (myLeads)) //18
  
-    
 })
 
 
