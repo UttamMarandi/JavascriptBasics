@@ -91,5 +91,6 @@ myLeads = JSON.stringify(myLeads);
  console.log("Check true or false");
 
 
-
  console.log(Boolean("leo"));
+
+ 
