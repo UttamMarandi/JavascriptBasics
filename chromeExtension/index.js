@@ -36,7 +36,7 @@
 
 //20. checking localStorage before rendering
 
-
+//22. 
 
 
 let myLeads = []
@@ -47,17 +47,28 @@ const inputEl = document.querySelector("#input-el")
 let inputBtn = document.getElementById("input-btn")
 const ulEL = document.getElementById("ul-el")
 
+const deleteBtn = document.getElementById("delete-btn")
+
+
 
 let leadsFromLocalStorage = localStorage.getItem("myLeads")
 
-leadsFromLocalStorage = JSON.parse(leadsFromLocalStorage)
+leadsFromLocalStorage = JSON.parse(leadsFromLocalStorage) //19
 console.log(leadsFromLocalStorage);
 
 if(leadsFromLocalStorage){  //leadsFromLocalStorage === [] is wrong b.c it's true but equates with leadsFromLocal Storage which results in false
-    myLeads = leadsFromLocalStorage
+    myLeads = leadsFromLocalStorage //20
     renderLeads()
 }
+
+deleteBtn.addEventListener("dblclick", function deleteAll(){
+    localStorage.clear()
+    myLeads = []
+    ulEL.innerHTML = "" // calling renderLeads() also gives the same reasults as myLeads[] array is empty now
+})
  
+
+
 inputBtn.addEventListener("click", function(){    
     myLeads.push(inputEl.value)
     console.log(myLeads);
