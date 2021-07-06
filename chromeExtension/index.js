@@ -41,13 +41,9 @@
 //23. Create the tab button :- When clicked logs linkedin url
 
 //24. Save the taburl
+//25. Use chrome API to save the link
 
 let myLeads = []
-let tabs = [
-    {
-    urllink : "https://www.linkedin.com/in/uttammarandi-r/"
-    }
-]
 
 const inputEl = document.querySelector("#input-el")
 let inputBtn = document.getElementById("input-btn")
@@ -100,9 +96,15 @@ deleteBtn.addEventListener("dblclick", function deleteAll(){
 })
 
 tabBtn.addEventListener("click", function() {
-    myLeads.push(tabs[0].urllink)
-    localStorage.setItem("myLeads", JSON.stringify(myLeads))
-    render(myLeads)
+    //chrome API //25
+    chrome.tabs.query({active:true , currentWindow:true} , function(tabs){//in chrome object get tabs objet and run query method ...show undefined on run b.c we have to give permission to tabs object in manifest file..
+        console.log(tabs);
+        myLeads.push(tabs[0].url)
+        localStorage.setItem("myLeads", JSON.stringify(myLeads))
+        render(myLeads)
+    } )
+
+   
 
 })
 
