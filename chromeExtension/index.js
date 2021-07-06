@@ -43,6 +43,8 @@
 //24. Save the taburl
 //25. Use chrome API to save the link
 
+//26. Save and deploy extension to google chrome
+
 let myLeads = []
 
 const inputEl = document.querySelector("#input-el")
